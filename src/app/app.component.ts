@@ -51,37 +51,7 @@ export class XLarge {
     main { padding:20px 0; }
     pre { font-size:12px; }
   `],
-  template: `
-  <h3 id="universal">Angular2 Universal</h3>
-  <nav>
-    <a [routerLinkActive]="['active', 'router-link-active']" [routerLink]=" ['./'] ">Home</a>
-    <a [routerLinkActive]="['active', 'router-link-active']" [routerLink]=" ['./blog'] ">Blog</a>
-    <a [routerLinkActive]="['active', 'router-link-active']" [routerLink]=" ['./contact'] ">Contact</a>
-    <a [routerLinkActive]="['active', 'router-link-active']" [routerLink]=" ['./projects'] ">Projects</a>
-    <a [routerLinkActive]="['active', 'router-link-active']" [routerLink]=" ['./technology'] ">Technology</a>
-    <a [routerLinkActive]="['active', 'router-link-active']" [routerLink]=" ['./youtube'] ">YouTube</a>
-  </nav>
-  <div class="hero-universal">
-    <div class="inner-hero">
-      <div>
-        <span x-large>Universal JavaScript {{ title }}!</span>
-      </div>
-
-      Two-way binding: <input type="text" [value]="title" (input)="title = $event.target.value" autofocus>
-      <br><br>
-
-      <strong>Async data call return value:</strong>
-      <pre>{{ data | json }}</pre>
-
-      <strong>Router-outlet:</strong>
-      <main>
-        <router-outlet></router-outlet>
-      </main>
-
-      <blockquote>{{ server }}</blockquote>
-    </div>
-  </div>
-  `
+  templateUrl:  'app.template.html'
 })
 export class App {
   title: string = 'ftw';
