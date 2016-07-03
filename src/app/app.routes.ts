@@ -10,8 +10,8 @@ import { YouTube } from './youtube';
 
 export const routes: RouterConfig = [
   { path: '', component: Home },
-  { path: 'projects', component: Project },
-  { path: 'projects/:slug', component: Projects },
+  { path: 'projects', component: Projects },
+  { path: 'projects/:slug', component: Project },
   { path: 'blog', component: Blog },
   { path: 'blog/:post', component: Post },
   { path: 'technology', component: Technology },

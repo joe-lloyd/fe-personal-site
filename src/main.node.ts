@@ -13,6 +13,7 @@ import {
 
 import { provideRouter } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
+import {projectsService} from './app/projects/projects.service'
 
 // Application
 import {App} from './app/app.component';
@@ -34,7 +35,8 @@ export function ngApp(req, res) {
       {provide: REQUEST_URL, useValue: url},
       NODE_HTTP_PROVIDERS,
       provideRouter(routes),
-      NODE_LOCATION_PROVIDERS
+      NODE_LOCATION_PROVIDERS,
+      projectsService
     ],
     async: true,
     preboot: false // { appRoot: 'app' } // your top level app component selector

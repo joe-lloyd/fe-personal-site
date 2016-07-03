@@ -12,30 +12,14 @@ import { Technology } from './technology';
 import { Contact } from './contact';
 import { YouTube } from './youtube';
 //
-/////////////////////////
-// ** Example Directive
-// Notice we don't touch the Element directly
 
-@Directive({
-  selector: '[x-large]'
-})
-export class XLarge {
-  constructor(element: ElementRef, renderer: Renderer) {
-    // ** IMPORTANT **
-    // we must interact with the dom through -Renderer-
-    // for webworker/server to see the changes
-    renderer.setElementStyle(element.nativeElement, 'fontSize', 'x-large');
-    // ^^
-  }
-}
 
 /////////////////////////
 // ** MAIN APP COMPONENT **
 @Component({
   selector: 'app', // <app></app>
   directives: [
-    ...ROUTER_DIRECTIVES,
-    XLarge
+    ...ROUTER_DIRECTIVES
   ],
   styles: [`
     * { padding:0; margin:0; }
@@ -48,23 +32,5 @@ export class XLarge {
   templateUrl:  'app.template.html'
 })
 export class App {
-  title: string = 'ftw';
-  data = {};
-  server: string;
-
-  constructor(public http: Http) { }
-
-  ngOnInit() {
-    // limit the use of setTimeouts
-    setTimeout(() => {
-      this.server = 'This was rendered from the server!';
-    }, 10);
-
-    // use services for http calls
-    this.http.get('/data.json')
-      .subscribe(res => {
-        this.data = res.json();
-      });
-  }
 
 }
