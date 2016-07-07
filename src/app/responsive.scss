@@ -1,0 +1,29 @@
+
+/* BREAKPOINTS */
+
+$container_max_width: 1120px;
+$gutter_width: 16px;
+
+$screen-sizes: (
+
+  xs: 375px,
+  sm: 640px,
+  md: 960px,
+  lg: 1120px
+
+);
+
+
+@mixin respond($media, $range) {
+
+  @if $range == min {
+    @media only screen and (min-width: (map-get($screen-sizes, $media) + 1px )) {
+      @content;
+    }
+  } @else if($range == max) {
+    @media only screen and (max-width: (map-get($screen-sizes, $media) )) {
+      @content;
+    }
+  }
+
+}

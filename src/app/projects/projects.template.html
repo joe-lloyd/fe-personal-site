@@ -1,35 +1,3 @@
 <div class="projects">
-  This is the "projects Durp" page
-
-  {{getData}}
-
-  <p>
-    id:{{id}}
-  </p>
-  <p>
-    title: {{title}}
-  </p>
-
-  <p>
-    client:
-  {{client}}
-  </p>
-  <p>
-    employer:
-  {{employer}}
-  </p>
-  <p>
-    link to project:
-  {{link_to_project}}
-  </p>
-  <p>
-    link to repo:
-  {{link_to_repo}}
-  </p>
-  <p>tech used: </p>
-  <ul>
-    <li *ngFor="let tech of tech_used">
-      {{tech.tech_used_name}}
-    </li>
-  </ul>
+    <project-block class="animated" *ngFor="let item of getData" [item]="item" [class.Odd]="slideInLeft" [class.even]="slideInRight"  ></project-block>
 </div>

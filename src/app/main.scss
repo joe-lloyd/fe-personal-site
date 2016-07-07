@@ -1,0 +1,29 @@
+main {
+  padding: 20px 0;
+}
+
+body {
+  min-height: 100vh;
+  @include deep-map-get('background-color', $base_colours, 'blue', 'light');
+}
+
+nav {
+  @include deep-map-get('background-color', $base_colours, 'blue', 'indigo');
+  min-height: 40px;
+
+  a {
+    @include transition(background-color, 0.4s, ease-in-out);
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    padding: 20px;
+    display: inline-block;
+
+    &:hover {
+      @include deep-map-get('background-color', $base_colours, 'blue', 'ultramarine');
+    }
+  }
+}
+.router-link-active {
+  @include deep-map-get('background-color', $base_colours, 'blue', 'ultramarine');
+}

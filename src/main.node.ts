@@ -39,7 +39,7 @@ export function ngApp(req, res) {
       projectsService
     ],
     async: true,
-    preboot: false // { appRoot: 'app' } // your top level app component selector
+    preboot: {buffer: true} // { appRoot: 'app' } // your top level app component selector
   };
 
   res.render('index', config);

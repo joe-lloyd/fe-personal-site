@@ -1,0 +1,28 @@
+.projectblock {
+
+  @include deep-map-get('background-color', $base_colours, 'red', 'crimson');
+  display: block;
+  position: relative;
+  width: 800px;
+  border-radius: 5px;
+  margin: 15px auto;
+  padding: 15px;
+  color: white;
+  max-width: 100%;
+
+  img {
+
+  }
+
+  &__title {
+
+  }
+
+  &__intro {
+
+  }
+
+  &__year {
+
+  }
+}

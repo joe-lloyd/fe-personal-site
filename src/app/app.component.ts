@@ -21,14 +21,6 @@ import { YouTube } from './youtube';
   directives: [
     ...ROUTER_DIRECTIVES
   ],
-  styles: [`
-    * { padding:0; margin:0; }
-    nav { background:#158126; min-height:40px; border-bottom:5px #046923 solid; }
-    nav a { font-weight:bold; text-decoration:none; color:#fff; padding:20px; display:inline-block; }
-    nav a:hover { background:#00AF36; }
-    .router-link-active { background-color: #00AF36; }
-    main { padding:20px 0; }
-  `],
   templateUrl:  'app.template.html'
 })
 export class App {

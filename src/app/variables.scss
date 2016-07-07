@@ -1,0 +1,29 @@
+$base_colours: (
+  'red' : (
+    'deep' : #945d60,
+    'hot' : #af473c,
+    'crimson' : #cf6766
+  ),
+  'green' : (
+    'herb' : #626e60
+  ),
+  'black' : (
+    'base' : #3c3c3c
+  ),
+  'blue' : (
+    'indigo' : #30415d,
+    'ultramarine' : #031424,
+    'light' : #8eaebd
+  )
+);
+
+// function to grab properties from multi arrays
+@mixin deep-map-get($property, $array, $first, $second:'') {
+
+  @if $second == '' {
+    #{$property}: map-get($array, $first);
+  }
+  @else{
+    #{$property}: map-get( map-get($array, $first), $second);
+  }
+}
