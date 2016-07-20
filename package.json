@@ -39,9 +39,11 @@
     "angular2-universal": "~0.104.1",
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
+    "ng2-redux": "^3.2.1-beta.1",
     "normalize.css": "^4.1.1",
     "parse5": "^1.5.0",
     "preboot": "^2.1.2",
+    "redux": "^3.5.2",
     "rxjs": "5.0.0-beta.6"
   },
   "devDependencies": {

@@ -1,4 +1,4 @@
-.projectblock {
+.blogblock {
 
   @include deep-map-get('background-color', $base_colours, 'red', 'crimson');
   @include transition(background-color 0.4s ease-in-out);

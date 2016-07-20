@@ -4,7 +4,7 @@ main {
 
 body {
   min-height: 100vh;
-  @include deep-map-get('background-color', $base_colours, 'blue', 'light');
+  @include deep-map-get('background-color', $base_colours, 'white', 'base');
 }
 
 nav {
@@ -26,4 +26,8 @@ nav {
 }
 .router-link-active {
   @include deep-map-get('background-color', $base_colours, 'blue', 'ultramarine');
+}
+
+a {
+  text-decoration: none;
 }

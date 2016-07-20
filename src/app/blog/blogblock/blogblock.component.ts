@@ -4,13 +4,13 @@ import 'rxjs/add/operator/map';
 
 @Component({
   moduleId: __filename,
-  selector: 'project-block',
-  templateUrl: 'projectblock.template.html',
+  selector: 'blog-block',
+  templateUrl: 'blogblock.template.html',
   directives: [
     ...ROUTER_DIRECTIVES
   ]
 })
-export class ProjectBlock {
+export class BlogBlock {
 
   @Input('item') item: any;
 
@@ -25,8 +25,8 @@ export class ProjectBlock {
   ngOnInit() {
     console.log('child load',this.item);
     this.title = this.item.title.rendered;
-    this.year = this.item.acf.year_made;
-    this.intro = this.item.acf.intro;
+    // this.year = this.item.acf.year_made;
+    // this.intro = this.item.acf.intro;
     this.slug = './' + this.item.slug;
   }
 

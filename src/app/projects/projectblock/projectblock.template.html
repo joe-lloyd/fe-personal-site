@@ -1,5 +1,5 @@
-<div class="projectblock">
+<a class="projectblock" [routerLink]="slug">
   <h2>{{title}}</h2>
-  <p>{{intro}}</p>
-  <span>{{year}}</span>
-</div>
+  <div class="projectblock__intro" [innerHTML]="intro"></div>
+  <span class="projectblock__year">{{year}}</span>
+</a>
