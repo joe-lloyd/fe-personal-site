@@ -13,9 +13,10 @@ import {
 
 import { provideRouter } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
-import {projectsService} from './app/projects/projects.service'
-import {projectService} from './app/project/project.service'
-import {blogService} from './app/blog/blog.service'
+import {projectsService} from './app/projects/projects.service';
+import {projectService} from './app/project/project.service';
+import {blogService} from './app/blog/blog.service';
+import {PostService} from './app/post/post.service';
 
 // Application
 import {App} from './app/app.component';
@@ -40,7 +41,8 @@ export function ngApp(req, res) {
       NODE_LOCATION_PROVIDERS,
       projectsService,
       projectService,
-      blogService
+      blogService,
+      PostService
     ],
     async: true,
     preboot: {buffer: true} // { appRoot: 'app' } // your top level app component selector

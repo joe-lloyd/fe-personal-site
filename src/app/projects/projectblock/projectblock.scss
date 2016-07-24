@@ -3,8 +3,6 @@
   @include deep-map-get('background-color', $base_colours, 'red', 'crimson');
   @include transition(background-color 0.4s ease-in-out);
   display: block;
-  position: relative;
-  width: 800px;
   border-radius: 5px;
   margin: 15px auto;
   padding: 15px;

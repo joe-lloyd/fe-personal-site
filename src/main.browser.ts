@@ -3,9 +3,10 @@ import { bootstrap } from '@angular/platform-browser-dynamic';
 import { provideRouter } from '@angular/router';
 import { HTTP_PROVIDERS } from '@angular/http';
 
-import {projectsService} from './app/projects/projects.service'
-import {projectService} from './app/project/project.service'
-import {blogService} from './app/blog/blog.service'
+import {projectsService} from './app/projects/projects.service';
+import {projectService} from './app/project/project.service';
+import {blogService} from './app/blog/blog.service';
+import {PostService} from './app/post/post.service';
 
 // Application
 import {App} from './app/app.component';
@@ -18,6 +19,7 @@ export function ngApp() {
     projectsService,
     projectService,
     blogService,
+    PostService,
     provideRouter(routes)
   ]);
 }
