@@ -4,6 +4,7 @@ main {
   position: relative;
   width: 100%;
   margin: auto;
+  font-family: $basefont;
 }
 
 body {
@@ -39,4 +40,12 @@ a {
 
 img {
   max-width: 100%;
+}
+
+p {
+  font-family: $basefont;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $boldfont;
 }

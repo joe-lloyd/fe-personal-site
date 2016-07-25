@@ -25,6 +25,7 @@ app.use(bodyParser.json());
 
 // Serve static files
 app.use(express.static(ROOT, {index: false}));
+app.use('/static', express.static('/public'));
 
 import { ngApp } from './main.node';
 // Routes with html5pushstate
